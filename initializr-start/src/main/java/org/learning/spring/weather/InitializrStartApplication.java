@@ -1,4 +1,4 @@
-package org.learning.spring.initializrstart;
+package org.learning.spring.weather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
