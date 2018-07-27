@@ -37,6 +37,8 @@ dependencies {
     compile('com.google.guava:guava:25.1-jre')
     //redis
     compile('org.springframework.boot:spring-boot-starter-data-redis:2.0.3.RELEASE')
+    // Quartz
+    compile('org.springframework.boot:spring-boot-starter-quartz')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
