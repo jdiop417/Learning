@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class QuartzConfiguration {
 
-    private static final int TIME = 2;
+    private static final int TIME = 30 * 60;
 
     @Bean
     public JobDetail weatherDataSyncJobDetail() {

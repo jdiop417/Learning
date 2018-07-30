@@ -23,21 +23,22 @@ public class WeatherDataServiceImpl implements WeatherDataService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    private final String WEATHER_API = "http://wthrcdn.etouch.cn/weather_mini";
+    private final String WEATHER_URI = "http://wthrcdn.etouch.cn/weather_mini";
     private final Long TIME_OUT = 1800L;
 
     @Override
     public WeatherResponse getDataByCityId(String cityId) {
-        String uri = WEATHER_API + "?city=" + cityId;
+        String uri = WEATHER_URI + "?city=" + cityId;
         return doGetWeatherData(uri);
     }
 
 
     @Override
     public WeatherResponse getDataByCityName(String cityName) {
-        String uri = WEATHER_API + "?city=" + cityName;
+        String uri = WEATHER_URI + "?city=" + cityName;
         return doGetWeatherData(uri);
     }
+
 
     private WeatherResponse doGetWeatherData(String uri) {
         WeatherResponse weather = new WeatherResponse();
@@ -66,5 +67,20 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 
 
         return weather;
+    }
+
+    @Override
+    public void syncDataByCityId(String cityId) {
+        String uri = WEATHER_URI + "citykey=" + cityId;
+        this.saveWeatherData(uri);
+    }
+
+    private void saveWeatherData(String uri) {
+        ResponseEntity<String> forEntity = restTemplate.getForEntity(uri, String.class);
+        if (forEntity.getStatusCodeValue() == HttpStatus.OK.value()) {
+            String body = forEntity.getBody();
+            ValueOperations<String, String> ops = stringRedisTemplate.opsForValue();
+            ops.set(uri, body);
+        }
     }
 }
