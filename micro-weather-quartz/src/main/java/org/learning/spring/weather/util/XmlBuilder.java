@@ -8,7 +8,7 @@ import java.io.Reader;
 import java.io.StringReader;
 
 public class XmlBuilder {
-    public static Object xmlStr2Object(String xmlStr, Class<?> clazz) throws JAXBException, IOException {
+    public static Object xmlStr2Object(Class<?> clazz, String xmlStr) throws JAXBException, IOException {
         Object xmlObject = null;
         JAXBContext context = JAXBContext.newInstance(clazz);
         Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -17,6 +17,6 @@ public class XmlBuilder {
         if (reader != null) {
             reader.close();
         }
-        return xmlObject            ;
+        return xmlObject;
     }
 }
