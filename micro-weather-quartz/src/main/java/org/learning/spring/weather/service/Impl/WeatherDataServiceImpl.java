@@ -71,7 +71,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 
     @Override
     public void syncDataByCityId(String cityId) {
-        String uri = WEATHER_URI + "citykey=" + cityId;
+        String uri = WEATHER_URI + "?citykey=" + cityId;
         this.saveWeatherData(uri);
     }
 
