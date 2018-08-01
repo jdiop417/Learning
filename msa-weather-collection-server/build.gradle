@@ -39,9 +39,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-redis:2.0.3.RELEASE')
     //Quartz
     compile('org.springframework.boot:spring-boot-starter-quartz')
-    //thymeleaf
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf:2.0.3.RELEASE')
-
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
