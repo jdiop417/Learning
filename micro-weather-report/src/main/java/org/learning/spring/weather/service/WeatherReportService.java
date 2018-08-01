@@ -1,4 +1,7 @@
 package org.learning.spring.weather.service;
 
-public class WeatherReportService {
+import org.learning.spring.weather.vo.Weather;
+
+public interface WeatherReportService {
+    Weather getDataByCityId(String cityId);
 }
