@@ -43,7 +43,7 @@ dependencies {
     //web
     compile('org.springframework.boot:spring-boot-starter-web')
     //lombok
-    compileOnly('org.projectlombok:lombok:1.18.0')
+    compileOnly('org.projectlombok:lombok:1.16.20')
     //guava
     compile('com.google.guava:guava:25.1-jre')
     // Eureka Client
