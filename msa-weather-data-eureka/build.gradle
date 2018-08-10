@@ -30,7 +30,7 @@ repositories {
 }
 
 ext {
-    springCloudVersion = 'Finchley.M2'
+    springCloudVersion = 'Finchley.RELEASE'
 }
 
 dependencyManagement {

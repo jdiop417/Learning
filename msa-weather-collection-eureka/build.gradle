@@ -30,7 +30,7 @@ repositories {
 }
 
 ext {
-    springCloudVersion = 'Finchley.M2'
+    springCloudVersion = 'Finchley.RELEASE'
 }
 
 dependencyManagement {
@@ -45,7 +45,7 @@ dependencies {
     //httpClient
     compile('org.apache.httpcomponents:httpclient:4.5.6')
     //lombok
-    compileOnly('org.projectlombok:lombok:1.18.0')
+    compileOnly('org.projectlombok:lombok:1.16.20')
     //guava
     compile('com.google.guava:guava:25.1-jre')
     //redis

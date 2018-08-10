@@ -3,3 +3,12 @@ server:
   servlet:
     context-path: /
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: msa-weather-city-eureka
+
