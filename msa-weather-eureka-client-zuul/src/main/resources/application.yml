@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: micro-weather-eureka-client-zuul
+    name: msa-weather-eureka-client-zuul
 
 eureka:
   client:
