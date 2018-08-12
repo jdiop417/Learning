@@ -1,6 +1,6 @@
 package org.learning.spring.weather.controller;
 
-import com.google.common.collect.Lists;
+import org.learning.spring.weather.service.CityClient;
 import org.learning.spring.weather.service.WeatherReportService;
 import org.learning.spring.weather.vo.City;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +18,13 @@ import java.util.List;
 public class WeatherReportController {
     @Autowired
     private WeatherReportService weatherReportService;
+    @Autowired
+    private CityClient cityClient;
 
     @GetMapping("/cityId/{cityId}")
     public ModelAndView getReportByCityId(@PathVariable("cityId") String cityId, Model model) throws Exception {
-        // TODO 改为由城市数据API微服务提供数据
         List<City> cityList = null;
-        cityList = Lists.newArrayList();
-        City city = new City();
-        city.setCityId("101280601");
-        city.setCityName("深圳");
-        cityList.add(city);
+        cityList = cityClient.listCity();
         model.addAttribute("title", "老卫的天气预报");
         model.addAttribute("cityId", cityId);
         model.addAttribute("cityList", cityList);

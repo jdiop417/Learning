@@ -2,6 +2,7 @@ package org.learning.spring.weather.job;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.learning.spring.weather.service.CityClient;
 import org.learning.spring.weather.service.WeatherDataCollectionService;
 import org.learning.spring.weather.vo.City;
 import org.quartz.JobExecutionException;
@@ -14,6 +15,8 @@ import java.util.List;
 public class WeatherDataSyncJob extends QuartzJobBean {
     @Autowired
     private WeatherDataCollectionService weatherDataCollectionService;
+    @Autowired
+    private CityClient cityClient;
 
     @Override
     protected void executeInternal(org.quartz.JobExecutionContext context) throws JobExecutionException {
@@ -21,13 +24,9 @@ public class WeatherDataSyncJob extends QuartzJobBean {
         //获取城市列表
         List<City> cityList = null;
         try {
-            //TODO 改有城市数据api提供服务
-            cityList = Lists.newArrayList();
-            City city = new City();
-            city.setCityId("101280601");
-            cityList.add(city);
+            cityList = cityClient.listCity();
         } catch (Exception e) {
-            log.error("Exception!" + e.getMessage());
+            e.printStackTrace();
         }
         //遍历城市id获取天气
         for (City city : cityList) {
