@@ -20,9 +20,9 @@ public class HelloControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
-    public void hello() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andExpect(content().string("" +
-                "Hello world!"));
-    }
+//    @Test
+//    public void hello() throws Exception {
+//        mockMvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andExpect(content().string("" +
+//                "Hello world!"));
+//    }
 }
