@@ -26,7 +26,7 @@ public class WeatherDataSyncJob extends QuartzJobBean {
         try {
             cityList = cityClient.listCity();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.debug(e.getMessage());
         }
         //遍历城市id获取天气
         for (City city : cityList) {
