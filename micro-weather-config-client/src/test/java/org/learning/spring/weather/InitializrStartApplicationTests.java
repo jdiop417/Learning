@@ -1,5 +1,6 @@
 package org.learning.spring.weather;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +15,7 @@ public class InitializrStartApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		Assert.assertEquals("auther=Life is short,use Python!",auther);
 	}
 
 }
