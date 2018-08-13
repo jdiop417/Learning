@@ -18,7 +18,7 @@ zuul:
   routes:
     city:
       path: /city/**
-      serviceId: mmsa-weather-city-eureka
+      serviceId: msa-weather-city-eureka
     data:
       path: /data/**
       serviceId: msa-weather-data-eureka

@@ -1,5 +1,5 @@
 server:
-  port: 8087
+  port: 8088
   servlet:
     context-path: /
 
@@ -7,7 +7,7 @@ spring:
   thymeleaf:
     cache: false
   application:
-    name: msa-weather-report-eureka-feign
+    name: msa-weather-report-eureka-feign-geteway
 
 eureka:
   client:
