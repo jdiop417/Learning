@@ -43,6 +43,8 @@ dependencies {
     compile('com.google.guava:guava:25.1-jre')
     //Eureka Client
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    // Config Client
+    compile('org.springframework.cloud:spring-cloud-config-client')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

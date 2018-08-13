@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: micro-weather-eureka-client
+    name: micro-weather-config-server
   cloud:
     config:
       server:
