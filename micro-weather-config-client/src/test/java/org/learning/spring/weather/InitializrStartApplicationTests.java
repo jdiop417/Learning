@@ -10,12 +10,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InitializrStartApplicationTests {
-	@Value("auther")
+	@Value("${auther}")
 	private String auther;
 
 	@Test
 	public void contextLoads() {
-		Assert.assertEquals("auther=Life is short,use Python!",auther);
+		Assert.assertEquals("Life is short,use Python!",auther);
 	}
 
 }
