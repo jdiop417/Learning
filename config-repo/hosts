@@ -1,0 +1,22 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+
+#jetbrains
+0.0.0.0 account.jetbrains.com 
+
+#gitlab env 
+120.132.81.21 gitlab.chiqdata.com
+
+#chfcloud
+10.4.68.188 tysx.chfcloud.com tautho.chfcloud.com tcs.chfcloud.com tdm.chfcloud.com tmp.chfcloud.com trule.chfcloud.com tsxr.chfcloud.com ttax.chfcloud.com
+10.4.68.191 tubp.chfcloud.com
+10.4.68.194 tfp.chfcloud.com
+10.4.68.199 ttravel.chfcloud.com
+
