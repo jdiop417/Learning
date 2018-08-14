@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InitializrStartApplicationTests {
-	@Value("${auther}")
+	@Value("${server.port}")
 	private String auther;
 
 	@Test
