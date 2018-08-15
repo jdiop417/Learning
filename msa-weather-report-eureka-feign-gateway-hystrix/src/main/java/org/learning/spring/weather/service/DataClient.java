@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(value = "msa-weather-eureka-client-zuul")
+@FeignClient(name = "msa-weather-eureka-client-zuul",fallback = DataClientFallback.class)
 @Component
 public interface DataClient {
     @GetMapping("/city/cities")

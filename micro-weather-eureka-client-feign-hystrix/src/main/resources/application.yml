@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: micro-weather-eureka-client-feign
+    name: micro-weather-eureka-client-feign-hystrix
 
 eureka:
   client:

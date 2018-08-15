@@ -7,7 +7,7 @@ spring:
   thymeleaf:
     cache: false
   application:
-    name: msa-weather-report-eureka-feign-geteway
+    name: msa-weather-report-eureka-feign-geteway-hystrix
 
 eureka:
   client:
@@ -15,6 +15,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 feign:
+  hystrix:
+    enable: true
   client:
     config:
       feignName:
