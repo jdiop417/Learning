@@ -16,7 +16,7 @@ eureka:
 
 feign:
   hystrix:
-    enable: true
+    enabled: true
   client:
     config:
       feignName:
